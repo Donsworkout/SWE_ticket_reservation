@@ -12,11 +12,13 @@ private:
 
 public:
 	TicketCollection ticketCollection;
+
 	HomeTeam();
 	HomeTeam(string, string);
 	virtual ~HomeTeam();
 
-	HomeTeam getHomeTeam(HomeTeam *homeTeam);
-	string getName();
+	HomeTeam getHomeTeam();
 	void listAvailableTickets();
+
+	string getName();
 };

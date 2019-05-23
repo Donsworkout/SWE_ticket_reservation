@@ -13,9 +13,9 @@ DataSetter::~DataSetter() {
 vector<HomeTeam *> DataSetter::getHomeTeams() {
 	HomeTeamCollection homeTeamCollection;
 
-	HomeTeam* a = new HomeTeam("Doosan Bears", "Seoul");
-	HomeTeam* b = new HomeTeam("Lotte Giants", "Ulsan");
-	HomeTeam* c = new HomeTeam("Kia Tigers", "Gwangju");
+	HomeTeam* a = new HomeTeam("Doosan_Bears", "Seoul");
+	HomeTeam* b = new HomeTeam("Lotte_Giants", "Ulsan");
+	HomeTeam* c = new HomeTeam("Kia_Tigers", "Gwangju");
 
 	homeTeamCollection.add(a);
 	homeTeamCollection.add(b);
@@ -28,8 +28,8 @@ vector<HomeTeam *> DataSetter::getHomeTeams() {
 
 vector<HomeTeam *> DataSetter::setDefaultTickets(vector<HomeTeam *> homeTeams) {
 	TicketCollection tc1;
-	Ticket * a1 = new Ticket(10000, "20180503", "14:00", "20180501", "Doosan Bears", "Lotte Giants", "A1");
-	Ticket * a2 = new Ticket(20000, "20180504", "15:00", "20180502", "Doosan Bears", "Kia Tigers", "M4");
+	Ticket * a1 = new Ticket(10000, "20180503", "14:00", "20180501", "Doosan_Bears", "Lotte_Giants", "A1");
+	Ticket * a2 = new Ticket(20000, "20180504", "15:00", "20180502", "Doosan_Bears", "Kia_Tigers", "M4");
 	tc1.add(a1);
 	tc1.add(a2);
 	homeTeams[0]->ticketCollection = tc1;

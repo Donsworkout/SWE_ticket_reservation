@@ -19,5 +19,8 @@ void SearchAvailableTickets::startSearch() {
 	SearchAvailableTicketsUI::getInstance()->startInterface(availableTeams);
 }
 
+void SearchAvailableTickets::showAvailableTickets(HomeTeam * homeTeam) {
+	homeTeam->listAvailableTickets();
+}
 
 SearchAvailableTickets * SearchAvailableTickets::inst;
