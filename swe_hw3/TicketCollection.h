@@ -1,11 +1,16 @@
 #pragma once
 #include "stdafx.h"
-namespace std {
+#include "Ticket.h"
 
-	class TicketCollection {
-	public:
-		TicketCollection();
-		virtual ~TicketCollection();
-	};
+class TicketCollection {
 
-} /* namespace std */
+private:
+	vector<Ticket *> Tickets;
+
+public:
+	TicketCollection();
+	virtual ~TicketCollection();
+
+	vector<Ticket *> getAll();
+	void add(Ticket *);
+};

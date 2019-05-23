@@ -1,8 +1,6 @@
 #include "stdafx.h"
 #include "HomeTeamCollection.h"
 
-using namespace std;
-
 HomeTeamCollection::HomeTeamCollection() {
 	// TODO Auto-generated constructor stub
 
@@ -13,10 +11,9 @@ HomeTeamCollection::~HomeTeamCollection() {
 }
 
 vector<HomeTeam *> HomeTeamCollection::getAll() {
-	cout << "getAll BAAM" << endl;
 	return homeTeams;
 }
 
 void HomeTeamCollection::add(HomeTeam * homeTeam) {
-	this->homeTeams.push_back(homeTeam);
+	homeTeams.push_back(homeTeam);
 }

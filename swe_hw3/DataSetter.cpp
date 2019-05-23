@@ -10,7 +10,7 @@ DataSetter::~DataSetter() {
 }
 
 vector<HomeTeam *> DataSetter::getHomeTeams() {
-	cout << "홈팀 데이터 세팅 " << endl;
+	cout << "DataSetter::Get all Home Teams" << endl;
 	HomeTeamCollection homeTeamCollection;
 
 	HomeTeam* a = new HomeTeam("Doosan Bears", "Seoul");
@@ -24,6 +24,34 @@ vector<HomeTeam *> DataSetter::getHomeTeams() {
 	vector<HomeTeam *> homeTeams = homeTeamCollection.getAll();
 
 	return homeTeams;
+}
+
+vector<HomeTeam *> DataSetter::setDefaultTickets(vector<HomeTeam *> homeTeams) {
+	cout << "DataSetter::Set Tickets to Home Teams" << endl;
+
+	TicketCollection tc1;
+	Ticket * a1 = new Ticket(10000, "20180503", "14:00", "20180501", "Doosan Bears", "Lotte Giants", "A1");
+	Ticket * a2 = new Ticket(20000, "20180504", "15:00", "20180502", "Doosan Bears", "Kia Tigers", "M4");
+	tc1.add(a1);
+	tc1.add(a2);
+	homeTeams[0]->ticketCollection = tc1;
+
+	TicketCollection tc2;
+	Ticket * b1 = new Ticket(5000, "20180505", "10:00", "20180501", "Lotte Giants", "Doosan Bears", "C1");
+	Ticket * b2 = new Ticket(8000, "20180506", "11:00", "20180502", "Lotte Giants", "Kia Tigers", "K2");
+	tc2.add(b1);
+	tc2.add(b2);
+	homeTeams[1]->ticketCollection = tc2;
+
+	TicketCollection tc3;
+	Ticket * c1 = new Ticket(4000, "20180507", "09:00", "20180501", "Kia Tigers", "Doosan Bears", "L11");
+	Ticket * c2 = new Ticket(4000, "20180508", "19:00", "20180502", "Kia Tigers", "Lotte Giants", "B50");
+	tc3.add(c1);
+	tc3.add(c2);
+	homeTeams[2]->ticketCollection = tc3;
+
+	return homeTeams;
+
 }
 
 DataSetter DataSetter::inst;

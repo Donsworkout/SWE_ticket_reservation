@@ -1,15 +1,20 @@
 #include "stdafx.h"
 #include "TicketCollection.h"
 
-namespace std {
 
-	TicketCollection::TicketCollection() {
-		// TODO Auto-generated constructor stub
+TicketCollection::TicketCollection() {
+	// TODO Auto-generated constructor stub
 
-	}
+}
 
-	TicketCollection::~TicketCollection() {
-		// TODO Auto-generated destructor stub
-	}
+TicketCollection::~TicketCollection() {
+	// TODO Auto-generated destructor stub
+}
 
-} /* namespace std */
+vector<Ticket *> TicketCollection::getAll() {
+	return Tickets;
+}
+
+void TicketCollection::add(Ticket * ticket) {
+	Tickets.push_back(ticket);
+}
