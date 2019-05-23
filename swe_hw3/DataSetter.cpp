@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "DataSetter.h"
+#include "HomeTeamCollection.h"
 
 DataSetter::DataSetter() {
 	// TODO Auto-generated constructor stub
@@ -10,7 +11,6 @@ DataSetter::~DataSetter() {
 }
 
 vector<HomeTeam *> DataSetter::getHomeTeams() {
-	cout << "DataSetter::Get all Home Teams" << endl;
 	HomeTeamCollection homeTeamCollection;
 
 	HomeTeam* a = new HomeTeam("Doosan Bears", "Seoul");
@@ -27,8 +27,6 @@ vector<HomeTeam *> DataSetter::getHomeTeams() {
 }
 
 vector<HomeTeam *> DataSetter::setDefaultTickets(vector<HomeTeam *> homeTeams) {
-	cout << "DataSetter::Set Tickets to Home Teams" << endl;
-
 	TicketCollection tc1;
 	Ticket * a1 = new Ticket(10000, "20180503", "14:00", "20180501", "Doosan Bears", "Lotte Giants", "A1");
 	Ticket * a2 = new Ticket(20000, "20180504", "15:00", "20180502", "Doosan Bears", "Kia Tigers", "M4");
@@ -54,4 +52,4 @@ vector<HomeTeam *> DataSetter::setDefaultTickets(vector<HomeTeam *> homeTeams) {
 
 }
 
-DataSetter DataSetter::inst;
+DataSetter * DataSetter::inst;

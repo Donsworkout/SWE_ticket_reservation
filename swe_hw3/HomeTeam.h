@@ -1,7 +1,7 @@
 #pragma once
 #include "stdafx.h"
-#include "Ticket.h"
 #include "TicketCollection.h"
+#include "HomeTeam.h"
 
 using namespace std;
 

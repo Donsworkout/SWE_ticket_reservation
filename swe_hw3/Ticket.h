@@ -1,6 +1,8 @@
 #pragma once
 #include "stdafx.h"
 
+using namespace std;
+
 class Ticket {
 private: 
 	int price;

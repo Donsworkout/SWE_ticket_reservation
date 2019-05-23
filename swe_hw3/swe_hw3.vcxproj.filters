@@ -54,6 +54,12 @@
     <ClInclude Include="DataSetter.h">
       <Filter>소스 파일\헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="SearchAvailableTickets.h">
+      <Filter>소스 파일\헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SearchAvailableTicketsUI.h">
+      <Filter>소스 파일\헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -76,6 +82,12 @@
     </ClCompile>
     <ClCompile Include="DataSetter.cpp">
       <Filter>소스 파일\util</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchAvailableTickets.cpp">
+      <Filter>소스 파일\controller</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchAvailableTicketsUI.cpp">
+      <Filter>소스 파일\ui</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -150,6 +150,8 @@
     <ClInclude Include="DataSetter.h" />
     <ClInclude Include="HomeTeam.h" />
     <ClInclude Include="HomeTeamCollection.h" />
+    <ClInclude Include="SearchAvailableTickets.h" />
+    <ClInclude Include="SearchAvailableTicketsUI.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Ticket.h" />
@@ -159,6 +161,8 @@
     <ClCompile Include="DataSetter.cpp" />
     <ClCompile Include="HomeTeam.cpp" />
     <ClCompile Include="HomeTeamCollection.cpp" />
+    <ClCompile Include="SearchAvailableTickets.cpp" />
+    <ClCompile Include="SearchAvailableTicketsUI.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
