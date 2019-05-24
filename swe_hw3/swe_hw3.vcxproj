@@ -147,9 +147,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BookTicket.h" />
+    <ClInclude Include="Buyer.h" />
     <ClInclude Include="DataSetter.h" />
     <ClInclude Include="HomeTeam.h" />
     <ClInclude Include="HomeTeamCollection.h" />
+    <ClInclude Include="Member.h" />
     <ClInclude Include="SearchAvailableTickets.h" />
     <ClInclude Include="SearchAvailableTicketsUI.h" />
     <ClInclude Include="stdafx.h" />
@@ -158,9 +161,12 @@
     <ClInclude Include="TicketCollection.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BookTicket.cpp" />
+    <ClCompile Include="Buyer.cpp" />
     <ClCompile Include="DataSetter.cpp" />
     <ClCompile Include="HomeTeam.cpp" />
     <ClCompile Include="HomeTeamCollection.cpp" />
+    <ClCompile Include="Member.cpp" />
     <ClCompile Include="SearchAvailableTickets.cpp" />
     <ClCompile Include="SearchAvailableTicketsUI.cpp" />
     <ClCompile Include="stdafx.cpp">

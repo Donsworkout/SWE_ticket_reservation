@@ -1,6 +1,7 @@
 #pragma once
 #include "stdafx.h"
 #include "HomeTeam.h"
+#include "Buyer.h"
 
 class SearchAvailableTickets
 {
@@ -9,7 +10,7 @@ private:
 	SearchAvailableTickets();
 public:
 	static SearchAvailableTickets * getInstance() { return inst; }
-	void startSearch(vector<HomeTeam *>);
+	void startSearch(Buyer *, vector<HomeTeam *>);
 	void showAvailableTickets(HomeTeam *);
 	~SearchAvailableTickets();
 };

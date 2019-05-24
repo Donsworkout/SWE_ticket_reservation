@@ -2,6 +2,9 @@
 #include "SearchAvailableTicketsUI.h"
 #include "SearchAvailableTickets.h"
 #include "DataSetter.h"
+#include "Buyer.h"
+#include "Ticket.h"
+#include "BookTicket.h"
 
 SearchAvailableTicketsUI::SearchAvailableTicketsUI()
 {
@@ -12,7 +15,7 @@ SearchAvailableTicketsUI::~SearchAvailableTicketsUI()
 {
 }
 
-void SearchAvailableTicketsUI::startInterface(vector<HomeTeam *> homeTeams) {
+void SearchAvailableTicketsUI::startInterface(Buyer * buyer, vector<HomeTeam *> homeTeams) {
 	int hts = homeTeams.size();
 	string teamName;
 	bool flag = true;
@@ -30,12 +33,37 @@ void SearchAvailableTicketsUI::startInterface(vector<HomeTeam *> homeTeams) {
 			if (teamName == homeTeams[i]->getName()) {
 				SearchAvailableTickets::getInstance()->showAvailableTickets(homeTeams[i]);
 				flag = false;
-				break;
+				// extend 부분
+				buyTicketInterface(buyer, homeTeams[i]);
 			}
 		}
 		if (flag == true) {
 			cout << "일치하는 팀이 없습니다." << endl;
 		}
+	}
+}
+
+void SearchAvailableTicketsUI::buyTicketInterface(Buyer * buyer, HomeTeam * homeTeam) {
+	string matchDate;
+	string matchTime;
+	string awayTeam;
+	string seat;
+	map<string, string> ticketInfo;
+	cout << "\n\n" << endl;
+	bool find = false;
+	while (find == false) {
+		cout << "구매를 원하시는 티켓이 있으면 입력하여 주세요 " << endl;
+		cout << "(경기날짜 경기시간 어웨이팀 좌석 순 입력)" << endl;
+		cout << "==========================================\n\n" << endl;
+		cout << "티켓 정보 입력: ";
+		cin >> matchDate >> matchTime >> awayTeam >> seat;
+
+		ticketInfo.insert(make_pair("matchDate", matchDate));
+		ticketInfo.insert(make_pair("matchTime", matchTime));
+		ticketInfo.insert(make_pair("awayTeam", awayTeam));
+		ticketInfo.insert(make_pair("seat", seat));
+
+		find = BookTicket::getInstance()->bookTicket(homeTeam, buyer, ticketInfo);
 	}
 }
 

@@ -1,6 +1,7 @@
 #pragma once
 #include "stdafx.h"
 #include "HomeTeam.h"
+#include "Buyer.h"
 
 class DataSetter {
 private:
@@ -13,4 +14,5 @@ public:
 	virtual ~DataSetter();
 
 	vector<HomeTeam *> getHomeTeams();
+	vector<Buyer *> getBuyers();
 };

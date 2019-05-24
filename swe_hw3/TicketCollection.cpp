@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "TicketCollection.h"
+#include "Ticket.h"
 
 TicketCollection::TicketCollection() {
 	// TODO Auto-generated constructor stub
@@ -11,9 +12,9 @@ TicketCollection::~TicketCollection() {
 }
 
 vector<Ticket *> TicketCollection::getAll() {
-	return Tickets;
+	return tickets;
 }
 
 void TicketCollection::add(Ticket * ticket) {
-	Tickets.push_back(ticket);
+	tickets.push_back(ticket);
 }

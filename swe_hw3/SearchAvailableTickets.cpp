@@ -5,7 +5,6 @@
 
 SearchAvailableTickets::SearchAvailableTickets()
 {
-
 }
 
 
@@ -13,8 +12,8 @@ SearchAvailableTickets::~SearchAvailableTickets()
 {
 }
 
-void SearchAvailableTickets::startSearch(vector<HomeTeam *> availableTeams) {
-	SearchAvailableTicketsUI::getInstance()->startInterface(availableTeams);
+void SearchAvailableTickets::startSearch(Buyer * buyer, vector<HomeTeam *> availableTeams) {
+	SearchAvailableTicketsUI::getInstance()->startInterface(buyer, availableTeams);
 }
 
 void SearchAvailableTickets::showAvailableTickets(HomeTeam * homeTeam) {

@@ -27,12 +27,16 @@ string HomeTeam::getName() {
 void HomeTeam::listAvailableTickets() {
 	vector<Ticket *> tickets = ticketCollection.getAll();
 	int ticketsSize = tickets.size();
-	 
-	// 벡터 받아와서 정렬을 명시하고 출력할 것인지, 아니면 아래처럼 정렬 데이터 미리 넣고 갈 것인지
+	sort(tickets.begin(), tickets.end(), TicketCollection::compare);
 	cout << "\n===================================================================" << endl;
 	cout << "가 격 | 경기날짜 | 경기시간 | 홈   팀 | 어 웨 이 팀 | 좌석" << endl;
 	for (int i = 0; i < ticketsSize; i++) {
-		cout << tickets[i]->getTicket() << endl;
+		Ticket * ticket = tickets[i]->getTicket();
+		// 가능한 티켓만 출력
+		if (ticket->availability) {
+			// [희망가격] [날짜-시간] [홈팀] [어웨이팀] [좌석위치] 
+			cout << to_string(ticket->price) + " | " + ticket->matchDate + " | " + ticket->matchTime + " | " + ticket->homeTeam + " | " + ticket->awayTeam + " | " + ticket->seat << endl;
+		}
 	}
 	cout << "===================================================================" << endl;
 }

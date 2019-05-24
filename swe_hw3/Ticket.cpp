@@ -13,13 +13,13 @@ Ticket::Ticket(int price, string matchDate, string matchTime, string registratio
 	this->homeTeam = homeTeam;
 	this->awayTeam = awayTeam;
 	this->seat = seat;
+	this->availability = true;
 }
 
 Ticket::~Ticket() {
 	// TODO Auto-generated destructor stub
 }
 
-string Ticket::getTicket() {
-	// [Èñ¸Á°¡°Ý] [³¯Â¥-½Ã°£] [È¨ÆÀ] [¾î¿þÀÌÆÀ] [ÁÂ¼®À§Ä¡] 
-	return to_string(price) + " | " + matchDate + " | " + matchTime + " | " + homeTeam + " | " + awayTeam + " | " + seat;
+Ticket * Ticket::getTicket() {
+	return this;
 }
