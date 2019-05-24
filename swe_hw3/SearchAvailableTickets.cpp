@@ -2,6 +2,7 @@
 #include "SearchAvailableTickets.h"
 #include "SearchAvailableTicketsUI.h"
 #include "DataSetter.h"
+#include "HomeTeam.h"
 
 SearchAvailableTickets::SearchAvailableTickets()
 {

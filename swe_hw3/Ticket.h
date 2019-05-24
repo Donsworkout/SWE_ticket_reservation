@@ -1,6 +1,6 @@
 #pragma once
 #include "stdafx.h"
-#include "Buyer.h"
+class Buyer;
 
 using namespace std;
 
@@ -25,5 +25,22 @@ public:
 	int price;
 
 	Ticket * getTicket();
+	// algorithm sorting 시 커스텀 비교용 function 구현
+	static bool compare(Ticket * me, Ticket * other) {
+		if (me->matchDate < other->matchDate) {
+			return true;
+		}
+		else if (me->matchDate > other->matchDate) {
+			return false;
+		}
+		else {
+			if (me->matchTime < other->matchTime) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+	}
 	//void bookTicket(Buyer *);
 };

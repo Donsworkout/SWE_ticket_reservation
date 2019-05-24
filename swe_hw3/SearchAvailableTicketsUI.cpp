@@ -5,6 +5,7 @@
 #include "Buyer.h"
 #include "Ticket.h"
 #include "BookTicket.h"
+#include "HomeTeam.h"
 
 SearchAvailableTicketsUI::SearchAvailableTicketsUI()
 {

@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "Buyer.h"
 
-
 Buyer::Buyer()
 {
 }

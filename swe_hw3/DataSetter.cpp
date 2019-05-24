@@ -1,6 +1,9 @@
 #include "stdafx.h"
 #include "DataSetter.h"
 #include "HomeTeamCollection.h"
+#include "HomeTeam.h"
+#include "Ticket.h"
+#include "Buyer.h"
 
 DataSetter::DataSetter() {
 	// TODO Auto-generated constructor stub

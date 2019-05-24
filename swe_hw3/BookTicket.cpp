@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "BookTicket.h"
-#include "Buyer.h"
+#include "Ticket.h"
+#include "HomeTeam.h"
 
 BookTicket::BookTicket()
 {

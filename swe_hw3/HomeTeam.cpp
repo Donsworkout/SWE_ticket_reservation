@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "HomeTeam.h"
+#include "Ticket.h"
 
 HomeTeam::HomeTeam() {
 
@@ -27,7 +28,9 @@ string HomeTeam::getName() {
 void HomeTeam::listAvailableTickets() {
 	vector<Ticket *> tickets = ticketCollection.getAll();
 	int ticketsSize = tickets.size();
-	sort(tickets.begin(), tickets.end(), TicketCollection::compare);
+	// 티켓 소팅
+	sort(tickets.begin(), tickets.end(), Ticket::compare);
+
 	cout << "\n===================================================================" << endl;
 	cout << "가 격 | 경기날짜 | 경기시간 | 홈   팀 | 어 웨 이 팀 | 좌석" << endl;
 	for (int i = 0; i < ticketsSize; i++) {

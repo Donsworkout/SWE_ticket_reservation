@@ -1,6 +1,6 @@
 #pragma once
 #include "stdafx.h"
-#include "HomeTeam.h"
+class HomeTeam;
 
 class HomeTeamCollection {
 

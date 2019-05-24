@@ -1,7 +1,7 @@
 #pragma once
 #include "stdafx.h"
-#include "HomeTeam.h"
-#include "Buyer.h"
+class HomeTeam;
+class Buyer;
 
 class SearchAvailableTicketsUI
 {
