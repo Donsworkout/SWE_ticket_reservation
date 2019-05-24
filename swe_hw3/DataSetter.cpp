@@ -22,8 +22,8 @@ vector<HomeTeam *> DataSetter::getHomeTeams() {
 	homeTeamCollection.add(c);
 
 	vector<HomeTeam *> homeTeams = homeTeamCollection.getAll();
-
-	return homeTeams;
+	vector<HomeTeam *> ticketSettedTeams = setDefaultTickets(homeTeams);
+	return ticketSettedTeams;
 }
 
 vector<HomeTeam *> DataSetter::setDefaultTickets(vector<HomeTeam *> homeTeams) {

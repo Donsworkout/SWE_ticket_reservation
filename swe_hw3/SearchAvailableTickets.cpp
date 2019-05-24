@@ -13,9 +13,7 @@ SearchAvailableTickets::~SearchAvailableTickets()
 {
 }
 
-void SearchAvailableTickets::startSearch() {
-	vector<HomeTeam *> homeTeams = DataSetter::getInstance()->getHomeTeams();
-	vector<HomeTeam *> availableTeams = DataSetter::getInstance()->setDefaultTickets(homeTeams);
+void SearchAvailableTickets::startSearch(vector<HomeTeam *> availableTeams) {
 	SearchAvailableTicketsUI::getInstance()->startInterface(availableTeams);
 }
 

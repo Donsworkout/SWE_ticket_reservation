@@ -9,7 +9,7 @@ private:
 	SearchAvailableTickets();
 public:
 	static SearchAvailableTickets * getInstance() { return inst; }
-	void startSearch();
+	void startSearch(vector<HomeTeam *>);
 	void showAvailableTickets(HomeTeam *);
 	~SearchAvailableTickets();
 };
