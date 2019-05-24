@@ -24,7 +24,9 @@ public:
 	string seat;
 	int price;
 
+	void bookTicket(Buyer *);
 	Ticket * getTicket();
+
 	// algorithm sorting 시 커스텀 비교용 function 구현
 	static bool compare(Ticket * me, Ticket * other) {
 		if (me->matchDate < other->matchDate) {
@@ -42,5 +44,4 @@ public:
 			}
 		}
 	}
-	//void bookTicket(Buyer *);
 };

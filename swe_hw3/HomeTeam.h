@@ -19,6 +19,5 @@ public:
 
 	HomeTeam getHomeTeam();
 	void listAvailableTickets();
-
 	string getName();
 };

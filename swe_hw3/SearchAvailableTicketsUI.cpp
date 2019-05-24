@@ -64,7 +64,7 @@ void SearchAvailableTicketsUI::buyTicketInterface(Buyer * buyer, HomeTeam * home
 		ticketInfo.insert(make_pair("awayTeam", awayTeam));
 		ticketInfo.insert(make_pair("seat", seat));
 
-		find = BookTicket::getInstance()->bookTicket(homeTeam, buyer, ticketInfo);
+		BookTicket::getInstance()->bookTicket(homeTeam, buyer, ticketInfo);
 	}
 }
 

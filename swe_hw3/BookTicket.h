@@ -10,7 +10,7 @@ private:
 	BookTicket();
 	~BookTicket();
 public:
-	bool bookTicket(HomeTeam *, Buyer *, map<string, string>);
+	void bookTicket(HomeTeam *, Buyer *, map<string, string>);
 	static BookTicket * getInstance() { return inst; }
 };
 
