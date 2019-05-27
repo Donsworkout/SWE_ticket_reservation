@@ -27,7 +27,7 @@ Ticket * Ticket::getTicket() {
 
 // [Èñ¸Á°¡°Ý] [³¯Â¥-½Ã°£] [È¨ÆÀ] [¾î¿þÀÌÆÀ] [ÁÂ¼®À§Ä¡]
 void Ticket::bookTicket(Buyer * buyer) {
-	buyer->purchasedTickets.add(this);
+	buyer->bookedTickets.add(this);
 	timeSold = "1111";
 	availability = false;
 	cout << "¿¹¾à ¼º°ø" << endl;

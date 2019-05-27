@@ -72,6 +72,9 @@
     <ClInclude Include="SearchBookedTicketsUI.h">
       <Filter>소스 파일\헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="SearchBookedTickets.h">
+      <Filter>소스 파일\헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -112,6 +115,9 @@
     </ClCompile>
     <ClCompile Include="SearchBookedTicketsUI.cpp">
       <Filter>소스 파일\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchBookedTickets.cpp">
+      <Filter>소스 파일\controller</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

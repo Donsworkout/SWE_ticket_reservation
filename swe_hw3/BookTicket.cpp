@@ -18,11 +18,9 @@ bool BookTicket::bookTicket(HomeTeam * homeTeam, Buyer * buyer, map<string,strin
 	int ticketSize = homeTeamTickets.size();
 
 	for (int i = 0; i < ticketSize; i++) {
-		if (ticketInfo["matchDate"] == homeTeamTickets[i]->matchDate && ticketInfo["matchTime"] == homeTeamTickets[i]->matchTime && ticketInfo["awayTeam"] == homeTeamTickets[i]->awayTeam && ticketInfo["seat"] == homeTeamTickets[i]->seat) {
-			if (homeTeamTickets[i]->availability) {
-				homeTeamTickets[i]->bookTicket(buyer);
-				return true;
-			}
+		if (homeTeamTickets[i]->availability && ticketInfo["matchDate"] == homeTeamTickets[i]->matchDate && ticketInfo["matchTime"] == homeTeamTickets[i]->matchTime && ticketInfo["awayTeam"] == homeTeamTickets[i]->awayTeam && ticketInfo["seat"] == homeTeamTickets[i]->seat) {
+			homeTeamTickets[i]->bookTicket(buyer);
+			return true;
 		}
 	}
 

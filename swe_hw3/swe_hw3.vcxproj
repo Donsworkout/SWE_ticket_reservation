@@ -153,6 +153,7 @@
     <ClInclude Include="HomeTeam.h" />
     <ClInclude Include="HomeTeamCollection.h" />
     <ClInclude Include="Member.h" />
+    <ClInclude Include="SearchBookedTickets.h" />
     <ClInclude Include="SearchBookedTicketsUI.h" />
     <ClInclude Include="SearchAvailableTickets.h" />
     <ClInclude Include="SearchAvailableTicketsUI.h" />
@@ -168,6 +169,7 @@
     <ClCompile Include="HomeTeam.cpp" />
     <ClCompile Include="HomeTeamCollection.cpp" />
     <ClCompile Include="Member.cpp" />
+    <ClCompile Include="SearchBookedTickets.cpp" />
     <ClCompile Include="SearchBookedTicketsUI.cpp" />
     <ClCompile Include="SearchAvailableTickets.cpp" />
     <ClCompile Include="SearchAvailableTicketsUI.cpp" />

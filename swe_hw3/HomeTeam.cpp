@@ -30,9 +30,6 @@ void HomeTeam::listAvailableTickets() {
 	int ticketsSize = tickets.size();
 	// 티켓 소팅
 	sort(tickets.begin(), tickets.end(), Ticket::compare);
-
-	cout << "\n===================================================================" << endl;
-	cout << "가 격 | 경기날짜 | 경기시간 | 홈   팀 | 어 웨 이 팀 | 좌석" << endl;
 	for (int i = 0; i < ticketsSize; i++) {
 		Ticket * ticket = tickets[i]->getTicket();
 		// 가능한 티켓만 출력
@@ -41,5 +38,4 @@ void HomeTeam::listAvailableTickets() {
 			cout << to_string(ticket->price) + " | " + ticket->matchDate + " | " + ticket->matchTime + " | " + ticket->homeTeam + " | " + ticket->awayTeam + " | " + ticket->seat << endl;
 		}
 	}
-	cout << "===================================================================" << endl;
 }

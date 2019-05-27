@@ -6,7 +6,7 @@
 class Buyer : public Member
 {
 public:
-	TicketCollection purchasedTickets;
+	TicketCollection bookedTickets;
 	Buyer();
 	Buyer(string, string, string, string, string, string);
 	~Buyer();
