@@ -1,13 +1,20 @@
 #include "stdafx.h"
 #include "HomeTeamCollection.h"
 #include "HomeTeam.h"
+#include "TicketCollection.h"
 #include "DataSetter.h"
 
 HomeTeamCollection::HomeTeamCollection() {
 	// È¨ÆÀ ÃÊ±âÈ­
+	TicketCollection * tc1 = new TicketCollection();
+	TicketCollection * tc2 = new TicketCollection();
+	TicketCollection * tc3 = new TicketCollection();
 	HomeTeam* a = new HomeTeam("sk", "Seoul");
 	HomeTeam* b = new HomeTeam("lg", "Ulsan");
 	HomeTeam* c = new HomeTeam("doosan", "Gwangju");
+	a->setTicketCollection(tc1);
+	b->setTicketCollection(tc2);
+	c->setTicketCollection(tc3);
 	this->add(a);
 	this->add(b);
 	this->add(c);
