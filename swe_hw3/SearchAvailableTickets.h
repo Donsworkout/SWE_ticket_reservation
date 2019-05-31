@@ -2,6 +2,7 @@
 #include "stdafx.h"
 class HomeTeam;
 class Buyer;
+class Ticket;
 
 class SearchAvailableTickets
 {
@@ -10,8 +11,8 @@ private:
 	SearchAvailableTickets();
 public:
 	static SearchAvailableTickets * getInstance() { return inst; }
-	void startSearch(Buyer *, vector<HomeTeam *>);
-	void showAvailableTickets(HomeTeam *);
+	//void startSearch(Buyer *);
+	vector<Ticket *> showAvailableTickets(HomeTeam *);
 	~SearchAvailableTickets();
 };
 

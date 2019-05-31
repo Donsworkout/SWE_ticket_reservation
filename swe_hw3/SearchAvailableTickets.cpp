@@ -13,15 +13,16 @@ SearchAvailableTickets::~SearchAvailableTickets()
 {
 }
 
-void SearchAvailableTickets::startSearch(Buyer * buyer, vector<HomeTeam *> availableTeams) {
-	SearchAvailableTicketsUI::getInstance()->startInterface(buyer, availableTeams);
+/*
+void SearchAvailableTickets::startSearch(Buyer * buyer) {
+	vector<HomeTeam *> homeTeams = DataSetter::getInstance()->getHomeTeams();
+	cout << homeTeams.size() << endl;
+	//SearchAvailableTicketsUI::getInstance()->startInterface(buyer, );
 }
+*/
 
-void SearchAvailableTickets::showAvailableTickets(HomeTeam * homeTeam) {
-	cout << "\n===================================================================" << endl;
-	cout << "가 격 | 경기날짜 | 경기시간 | 홈   팀 | 어 웨 이 팀 | 좌석" << endl;
-	homeTeam->listAvailableTickets();
-	cout << "\n===================================================================" << endl;
+vector<Ticket *> SearchAvailableTickets::showAvailableTickets(HomeTeam * homeTeam) {
+	return homeTeam->listAvailableTickets();
 }
 
 SearchAvailableTickets * SearchAvailableTickets::inst;

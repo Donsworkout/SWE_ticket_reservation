@@ -16,9 +16,9 @@ DataSetter::~DataSetter() {
 vector<HomeTeam *> DataSetter::getHomeTeams() {
 	HomeTeamCollection homeTeamCollection;
 
-	HomeTeam* a = new HomeTeam("Doosan_Bears", "Seoul");
-	HomeTeam* b = new HomeTeam("Lotte_Giants", "Ulsan");
-	HomeTeam* c = new HomeTeam("Kia_Tigers", "Gwangju");
+	HomeTeam* a = new HomeTeam("sk", "Seoul");
+	HomeTeam* b = new HomeTeam("lg", "Ulsan");
+	HomeTeam* c = new HomeTeam("doosan", "Gwangju");
 
 	homeTeamCollection.add(a);
 	homeTeamCollection.add(b);

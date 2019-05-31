@@ -18,6 +18,6 @@ public:
 	virtual ~HomeTeam();
 
 	HomeTeam getHomeTeam();
-	void listAvailableTickets();
+	vector<Ticket *> listAvailableTickets();
 	string getName();
 };
