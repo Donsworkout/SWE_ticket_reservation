@@ -34,3 +34,5 @@ HomeTeam * HomeTeamCollection::getHomeTeamByName(string teamName) {
 	}
 	return NULL;
 }
+
+HomeTeamCollection* HomeTeamCollection::inst = nullptr;

@@ -17,8 +17,8 @@ SearchAvailableTicketsUI::~SearchAvailableTicketsUI()
 {
 }
 
-vector<Ticket *> SearchAvailableTicketsUI::startInterface(Buyer * buyer, string teamName, HomeTeamCollection * htc){ 
-	HomeTeam * homeTeam = htc->getHomeTeamByName(teamName);
+vector<Ticket *> SearchAvailableTicketsUI::startInterface(Buyer * buyer, string teamName){ 
+	HomeTeam * homeTeam = HomeTeamCollection::getInstance()->getHomeTeamByName(teamName);
 	return SearchAvailableTickets::getInstance()->showAvailableTickets(homeTeam);
 }
 

@@ -6,11 +6,15 @@ class HomeTeamCollection {
 
 private:
 	vector<HomeTeam *> homeTeams;
-
-public:
 	HomeTeamCollection();
 	virtual ~HomeTeamCollection();
+	static HomeTeamCollection* inst;
+public:
 	vector<HomeTeam *> getHomeTeams();
 	HomeTeam * getHomeTeamByName(string);
 	void add(HomeTeam *);
+	static HomeTeamCollection * getInstance() {
+		if (inst == NULL) inst = new HomeTeamCollection();
+		return inst;
+	}
 };

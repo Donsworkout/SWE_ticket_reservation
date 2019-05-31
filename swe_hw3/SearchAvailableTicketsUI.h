@@ -13,7 +13,7 @@ private:
 public:
 	~SearchAvailableTicketsUI();
 	static SearchAvailableTicketsUI * getInstance() { return inst; }
-	vector<Ticket *> startInterface(Buyer *, string, HomeTeamCollection *);
+	vector<Ticket *> startInterface(Buyer *, string);
 	Ticket * buyTicketInterface(Buyer *, HomeTeam *, string, string, string);
 };
 
