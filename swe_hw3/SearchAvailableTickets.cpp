@@ -13,14 +13,6 @@ SearchAvailableTickets::~SearchAvailableTickets()
 {
 }
 
-/*
-void SearchAvailableTickets::startSearch(Buyer * buyer) {
-	vector<HomeTeam *> homeTeams = DataSetter::getInstance()->getHomeTeams();
-	cout << homeTeams.size() << endl;
-	//SearchAvailableTicketsUI::getInstance()->startInterface(buyer, );
-}
-*/
-
 vector<Ticket *> SearchAvailableTickets::showAvailableTickets(HomeTeam * homeTeam) {
 	return homeTeam->listAvailableTickets();
 }

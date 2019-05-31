@@ -10,7 +10,7 @@ TicketCollection::~TicketCollection() {
 	// TODO Auto-generated destructor stub
 }
 
-vector<Ticket *> TicketCollection::getAll() {
+vector<Ticket *> TicketCollection::getTickets() {
 	return tickets;
 }
 

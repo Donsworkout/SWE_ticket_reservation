@@ -13,6 +13,6 @@ public:
 	static DataSetter * getInstance() { return inst; };
 	virtual ~DataSetter();
 
-	vector<HomeTeam *> getHomeTeams();
+	// vector<HomeTeam *> getHomeTeams();
 	vector<Buyer *> getBuyers();
 };

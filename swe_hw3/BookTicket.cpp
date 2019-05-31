@@ -13,18 +13,18 @@ BookTicket::~BookTicket()
 {
 }
 
-bool BookTicket::bookTicket(HomeTeam * homeTeam, Buyer * buyer, map<string,string> ticketInfo) {
-	vector<Ticket *> homeTeamTickets = homeTeam->ticketCollection.getAll();
-	int ticketSize = homeTeamTickets.size();
+Ticket * BookTicket::bookTicket(HomeTeam * homeTeam, Buyer * buyer, map<string,string> ticketInfo) {
+	vector<Ticket *> homeTeamTickets = homeTeam->getTicketCollection()->getTickets();
 
-	for (int i = 0; i < ticketSize; i++) {
-		if (homeTeamTickets[i]->availability && ticketInfo["matchDate"] == homeTeamTickets[i]->matchDate && ticketInfo["matchTime"] == homeTeamTickets[i]->matchTime && ticketInfo["awayTeam"] == homeTeamTickets[i]->awayTeam && ticketInfo["seat"] == homeTeamTickets[i]->seat) {
+	// 홈팀 티켓중 정보와 일치하는 티켓 있으면 예약 고
+	for (int i = 0; i < homeTeamTickets.size(); i++) {
+		if (homeTeamTickets[i]->getAvailability() && ticketInfo["matchDate"] == homeTeamTickets[i]->getMatchDate() && ticketInfo["awayTeam"] == homeTeamTickets[i]->getAwayTeam() && ticketInfo["seat"] == homeTeamTickets[i]->getSeat()) {
 			homeTeamTickets[i]->bookTicket(buyer);
-			return true;
+			return homeTeamTickets[i];
 		}
 	}
 
-	return false;
+	return NULL;
 }
 
 BookTicket * BookTicket::inst;

@@ -13,8 +13,9 @@ DataSetter::~DataSetter() {
 	// TODO Auto-generated destructor stub
 }
 
+/*
 vector<HomeTeam *> DataSetter::getHomeTeams() {
-	HomeTeamCollection homeTeamCollection;
+	HomeTeamCollection::getInstance()
 
 	HomeTeam* a = new HomeTeam("sk", "Seoul");
 	HomeTeam* b = new HomeTeam("lg", "Ulsan");
@@ -28,25 +29,26 @@ vector<HomeTeam *> DataSetter::getHomeTeams() {
 	vector<HomeTeam *> ticketSettedTeams = setDefaultTickets(homeTeams);
 	return ticketSettedTeams;
 }
-
+*/
+/*
 vector<HomeTeam *> DataSetter::setDefaultTickets(vector<HomeTeam *> homeTeams) {
 	TicketCollection tc1;
-	Ticket * a1 = new Ticket(10000, "20180504", "14:00", "20180501", "Doosan_Bears", "Lotte_Giants", "A1");
-	Ticket * a2 = new Ticket(20000, "20180503", "15:00", "20180502", "Doosan_Bears", "Kia_Tigers", "M4");
+	Ticket * a1 = new Ticket(10000, "2019:05:22:12:00", "sk", "lg", "001001", false);
+	Ticket * a2 = new Ticket(20000, "2019:05:19:13:00", "sk", "doosan", "M4", false);
 	tc1.add(a1);
 	tc1.add(a2);
 	homeTeams[0]->ticketCollection = tc1;
 
 	TicketCollection tc2;
-	Ticket * b1 = new Ticket(5000, "20180506", "10:00", "20180501", "Lotte_Giants", "Doosan_Bears", "C1");
-	Ticket * b2 = new Ticket(8000, "20180505", "11:00", "20180502", "Lotte_Giants", "Kia_Tigers", "K2");
+	Ticket * b1 = new Ticket(5000, "2019:05:02:18:00", "lg", "sk", "C1", false);
+	Ticket * b2 = new Ticket(8000, "2019:05:01:11:00", "lg", "doosan", "K2", false);
 	tc2.add(b1);
 	tc2.add(b2);
 	homeTeams[1]->ticketCollection = tc2;
 
 	TicketCollection tc3;
-	Ticket * c1 = new Ticket(4000, "20180507", "09:00", "20180501", "Kia_Tigers", "Doosan_Bears", "L11");
-	Ticket * c2 = new Ticket(4000, "20180508", "19:00", "20180502", "Kia_Tigers", "Lotte_Giants", "B50");
+	Ticket * c1 = new Ticket(4000, "2019:05:10:09:00", "doosan", "sk", "L11", false);
+	Ticket * c2 = new Ticket(4000, "2019:05:08:18:00", "doosan", "lg", "B50", false);
 	tc3.add(c1);
 	tc3.add(c2);
 	homeTeams[2]->ticketCollection = tc3;
@@ -54,7 +56,7 @@ vector<HomeTeam *> DataSetter::setDefaultTickets(vector<HomeTeam *> homeTeams) {
 	return homeTeams;
 
 }
-
+*/
 vector<Buyer *> DataSetter::getBuyers() {
 	vector<Buyer *> buyers;
 

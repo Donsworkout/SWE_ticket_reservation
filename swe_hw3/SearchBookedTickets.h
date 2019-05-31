@@ -1,6 +1,7 @@
 #pragma once
 #include "stdafx.h"
 class Buyer; 
+class Ticket;
 
 class SearchBookedTickets
 {
@@ -10,6 +11,6 @@ private:
 	~SearchBookedTickets();
 public:
 	static SearchBookedTickets * getInstance() { return inst; }
-	void listBookedTickets(Buyer *);
+	vector<Ticket *> listBookedTickets(Buyer *);
 };
 

@@ -1,6 +1,7 @@
 #pragma once
 #include "stdafx.h"
 class HomeTeam;
+class HomeTeamCollection;
 class Buyer;
 class Ticket;
 
@@ -12,7 +13,7 @@ private:
 public:
 	~SearchAvailableTicketsUI();
 	static SearchAvailableTicketsUI * getInstance() { return inst; }
-	vector<Ticket *> startInterface(Buyer *, string);
-	void buyTicketInterface(Buyer *, HomeTeam *);
+	vector<Ticket *> startInterface(Buyer *, string, HomeTeamCollection *);
+	Ticket * buyTicketInterface(Buyer *, HomeTeam *, string, string, string);
 };
 

@@ -10,7 +10,6 @@ private:
 public:
 	TicketCollection();
 	virtual ~TicketCollection();
-
-	vector<Ticket *> getAll();
 	void add(Ticket *);
+	vector<Ticket *> getTickets();
 };

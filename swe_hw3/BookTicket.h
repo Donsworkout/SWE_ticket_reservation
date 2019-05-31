@@ -2,6 +2,7 @@
 #include "stdafx.h"
 class HomeTeam;
 class Buyer;
+class Ticket;
 
 class BookTicket
 {
@@ -10,7 +11,7 @@ private:
 	BookTicket();
 	~BookTicket();
 public:
-	bool bookTicket(HomeTeam *, Buyer *, map<string, string>);
+	Ticket * bookTicket(HomeTeam *, Buyer *, map<string, string>);
 	static BookTicket * getInstance() { return inst; }
 };
 

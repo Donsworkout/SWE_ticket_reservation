@@ -11,7 +11,6 @@ private:
 	SearchAvailableTickets();
 public:
 	static SearchAvailableTickets * getInstance() { return inst; }
-	//void startSearch(Buyer *);
 	vector<Ticket *> showAvailableTickets(HomeTeam *);
 	~SearchAvailableTickets();
 };

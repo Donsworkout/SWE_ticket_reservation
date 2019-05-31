@@ -10,7 +10,7 @@ private:
 public:
 	HomeTeamCollection();
 	virtual ~HomeTeamCollection();
-
-	vector<HomeTeam *> getAll();
+	vector<HomeTeam *> getHomeTeams();
+	HomeTeam * getHomeTeamByName(string);
 	void add(HomeTeam *);
 };

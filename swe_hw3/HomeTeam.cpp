@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "HomeTeam.h"
 #include "Ticket.h"
+#include "TicketCollection.h"
 
 HomeTeam::HomeTeam() {
 
@@ -25,6 +26,19 @@ string HomeTeam::getName() {
 	return this->name;
 }
 
+string HomeTeam::getCity() {
+	return this->city;
+}
+
+
+TicketCollection * HomeTeam::getTicketCollection() {
+	return this->ticketCollection;
+}
+
+void HomeTeam::setTicketCollection(TicketCollection * ticketCollection) {
+	this->ticketCollection = ticketCollection;
+}
+
 vector<Ticket *> HomeTeam::listAvailableTickets() {
-	return ticketCollection.getAll();
+	return this->ticketCollection->getTickets();
 }
